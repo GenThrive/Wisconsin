@@ -327,7 +327,7 @@ def build_map(data):
         if orgs_map.empty:
             map_fig = no_data_fig()
         else:
-            map_fig = make_map(orgs_map, 'Latitude', 'Longitude', tx_esc, geojson_featureidkey, esc_count_df, 'ESC', 'Organizations', map_center_lat, map_center_lon, map_zoom=map_zoom,)
+            map_fig = make_map(orgs_map, 'Latitude', 'Longitude', tx_esc, geojson_featureidkey, state_name, esc_count_df, 'ESC', 'Organizations', map_center_lat, map_center_lon, map_zoom=map_zoom,)
             
         return  map_fig
     # except:
@@ -452,4 +452,4 @@ def build_barchart(data, input_barchart):
 if __name__ == "__main__":
 
     # Starting flask server
-    app.run_server(debug=True, port=8040)
+    app.run_server(debug=False, port=8040)
